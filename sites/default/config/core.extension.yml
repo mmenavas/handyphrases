@@ -15,6 +15,7 @@ module:
   file: 0
   filter: 0
   handyphrases_blocks: 0
+  handyphrases_utility: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
