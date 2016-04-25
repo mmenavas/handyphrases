@@ -1,0 +1,30 @@
+uuid: bfc3c630-6e81-46ac-a5e1-6fd1bb20ec71
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.phrases
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__phrases_my_phrases
+theme: bartik
+region: content
+weight: null
+provider: null
+plugin: 'views_block:phrases-my_phrases'
+settings:
+  id: 'views_block:phrases-my_phrases'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n"
+    negate: false
+    context_mapping: {  }
