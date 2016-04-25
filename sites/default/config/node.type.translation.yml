@@ -1,0 +1,17 @@
+uuid: 9810ddf0-ae30-445c-8a71-673162c5555b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Translation
+type: translation
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

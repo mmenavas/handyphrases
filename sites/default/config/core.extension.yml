@@ -6,7 +6,6 @@ module:
   contextual: 0
   ctools: 0
   ctools_block: 0
-  ctools_views: 0
   dblog: 0
   disqus: 0
   dynamic_page_cache: 0
@@ -20,6 +19,7 @@ module:
   menu_link_content: 0
   menu_ui: 0
   node: 0
+  options: 0
   page_cache: 0
   page_manager: 0
   page_manager_ui: 0

@@ -1,0 +1,30 @@
+uuid: 436f5463-68ec-47c4-b84f-870623daebf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.translation.field_votes
+    - node.type.translation
+id: node.translation.default
+targetEntityType: node
+bundle: translation
+mode: default
+content:
+  field_votes:
+    type: number
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

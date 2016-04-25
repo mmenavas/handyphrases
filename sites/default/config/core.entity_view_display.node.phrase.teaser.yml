@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.phrase.field_category
     - field.field.node.phrase.field_disqus
-    - field.field.node.phrase.field_spanish
+    - field.field.node.phrase.field_translations
     - node.type.phrase
   module:
     - user
@@ -20,4 +20,4 @@ content:
 hidden:
   field_category: true
   field_disqus: true
-  field_spanish: true
+  field_translations: true

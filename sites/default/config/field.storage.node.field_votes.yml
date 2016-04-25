@@ -1,20 +1,19 @@
-uuid: 64d73551-2f6d-4c06-8613-e1f755c53577
+uuid: 7f23c6ac-067a-4e6d-ae9d-b9f1f150e02d
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_spanish
-field_name: field_spanish
+id: node.field_votes
+field_name: field_votes
 entity_type: node
-type: string
+type: integer
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

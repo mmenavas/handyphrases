@@ -1,0 +1,25 @@
+uuid: ee28aa76-80b3-45f0-8211-913e95b800bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_votes
+    - node.type.translation
+id: node.translation.field_votes
+field_name: field_votes
+entity_type: node
+bundle: translation
+label: Votes
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ' vote| votes'
+field_type: integer

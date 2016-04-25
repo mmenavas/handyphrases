@@ -1,0 +1,25 @@
+uuid: 96292b72-b795-49b5-a1cd-9df2eff6de1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.translation
+    - field.field.node.translation.field_votes
+    - node.type.translation
+  module:
+    - user
+id: node.translation.translation
+targetEntityType: node
+bundle: translation
+mode: translation
+content:
+  field_votes:
+    weight: 0
+    label: hidden
+    settings:
+      thousand_separator: "\t"
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+hidden:
+  links: true

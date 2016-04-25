@@ -1,0 +1,19 @@
+uuid: 0e65581a-10d6-45b4-89cb-1a112cdd5133
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.translation.field_votes
+    - node.type.translation
+  module:
+    - user
+id: node.translation.teaser
+targetEntityType: node
+bundle: translation
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_votes: true

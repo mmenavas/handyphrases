@@ -1,10 +1,10 @@
-uuid: 484a808f-3edc-4974-bd01-2eed609757c0
+uuid: 3774ab96-c266-43bb-9df5-e0c84509c076
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.add_phrase
-label: 'Add Phrase'
+id: node.translation
+label: Translation
 targetEntityType: node
 cache: true

@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.node.phrase.field_category
     - field.field.node.phrase.field_disqus
-    - field.field.node.phrase.field_spanish
+    - field.field.node.phrase.field_translations
     - node.type.phrase
 id: node.phrase.default
 targetEntityType: node
@@ -17,13 +17,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-  field_spanish:
-    weight: 1
+  field_translations:
+    weight: 26
     settings:
+      match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: entity_reference_autocomplete
   title:
     type: string_textfield
     weight: 0
