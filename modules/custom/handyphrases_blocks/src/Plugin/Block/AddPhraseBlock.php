@@ -76,11 +76,9 @@ class AddPhraseBlock extends BlockBase implements ContainerFactoryPluginInterfac
    */
   public function build() {
 
-    $form = array();
-
     $entity_type = 'node';
     $bundle = 'phrase';
-    $form_mode = 'node.add_phrase';
+//    $form_mode = 'node.add_phrase';
 
     $node_type = NodeType::load($bundle);
 
@@ -88,28 +86,7 @@ class AddPhraseBlock extends BlockBase implements ContainerFactoryPluginInterfac
       'type' => $node_type->id(),
     ));
 
-
-
-    $form = $this->entityFormBuilder->getForm($node, 'default', array(
-      'mode' => $form_mode
-    ));
-
-//    $phrase = \Drupal::entityTypeManager()
-//      ->getStorage('entity_form_display')
-//      ->create(array(
-//        'entity_form_display' => array(
-//          'targetEntityType' => $entity_type,
-//          'bundle' => $bundle,
-//          'mode' => $form_mode,
-//          'status' => TRUE,
-//        )
-//      ));
-//
-
-//    $phrase = entity_get_form_display($entity_type, $bundle, $form_mode);
-//
-//    $form = $phrase->buildForm();
-////    $form = \Drupal::service('entity.form_builder')->getForm($phrase);
+    $form = $this->entityFormBuilder->getForm($node);
 
     return $form;
   }
