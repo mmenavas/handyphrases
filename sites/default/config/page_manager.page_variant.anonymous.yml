@@ -1,0 +1,40 @@
+uuid: 9e8c7bb4-993c-4865-ae46-cefcee85b4ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.add_phrase
+  module:
+    - user
+id: anonymous
+label: anonymous
+variant: block_display
+variant_settings:
+  blocks:
+    5883dafe-9066-4011-ad80-ff0c4fe4ec72:
+      id: user_login_block
+      label: 'Not so fast! First you must log in or create an account.'
+      provider: user
+      label_display: visible
+      region: top
+      weight: 0
+      uuid: 5883dafe-9066-4011-ad80-ff0c4fe4ec72
+      context_mapping: {  }
+  id: block_display
+  label: null
+  uuid: c4c109e1-9645-4b88-a8b5-8b4c99e2f4a7
+  weight: 0
+  page_title: 'Add New Phrase'
+page: add_phrase
+weight: -10
+selection_criteria:
+  d432f324-5422-49d9-b57b-61f4cb357cc6:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: current_user
+    uuid: d432f324-5422-49d9-b57b-61f4cb357cc6
+selection_logic: and
+static_context: {  }

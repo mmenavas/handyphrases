@@ -1,0 +1,17 @@
+uuid: 955acf94-e0ff-498d-af76-97d2c232de32
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'create phrase content'
+  - 'delete own phrase content'
+  - 'edit own phrase content'
+  - 'view disqus comments'
+  - 'use  The form mode add_phrase linked to  node entity( phrase )'

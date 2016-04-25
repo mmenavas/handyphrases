@@ -1,0 +1,23 @@
+uuid: da4c4e20-b8ac-41cb-9866-4192d5ff9329
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.phrase.field_category
+    - field.field.node.phrase.field_disqus
+    - field.field.node.phrase.field_spanish
+    - node.type.phrase
+  module:
+    - user
+id: node.phrase.teaser
+targetEntityType: node
+bundle: phrase
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_category: true
+  field_disqus: true
+  field_spanish: true

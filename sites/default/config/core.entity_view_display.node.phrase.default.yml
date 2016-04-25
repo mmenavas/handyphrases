@@ -1,0 +1,21 @@
+uuid: 9eee6797-b91d-4a3a-86bc-d03edaadee63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.phrase.field_category
+    - field.field.node.phrase.field_disqus
+    - field.field.node.phrase.field_spanish
+    - node.type.phrase
+  module:
+    - user
+id: node.phrase.default
+targetEntityType: node
+bundle: phrase
+mode: default
+content: {  }
+hidden:
+  field_category: true
+  field_disqus: true
+  field_spanish: true
+  links: true

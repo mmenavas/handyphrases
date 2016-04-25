@@ -1,0 +1,10 @@
+uuid: 484a808f-3edc-4974-bd01-2eed609757c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.add_phrase
+label: 'Add Phrase'
+targetEntityType: node
+cache: true

@@ -1,0 +1,15 @@
+uuid: dc712491-5369-4de6-847c-24d68b8483df
+name: HandyPhrases
+mail: maximo.mena@handyphrases.com
+slogan: 'Learn Spanish one phrase at a time!'
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

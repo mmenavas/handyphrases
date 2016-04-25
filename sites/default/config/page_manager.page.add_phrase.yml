@@ -1,0 +1,11 @@
+uuid: 9455ae5c-c234-4522-9799-96a794feff4b
+langcode: en
+status: true
+dependencies: {  }
+id: add_phrase
+label: 'Add Phrase'
+use_admin_theme: false
+path: /add-phrase
+access_logic: and
+access_conditions: {  }
+parameters: {  }

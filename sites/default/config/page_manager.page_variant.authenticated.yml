@@ -1,0 +1,41 @@
+uuid: b791619b-1fa3-4354-a70a-8108eb990065
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.add_phrase
+  module:
+    - node
+    - user
+id: authenticated
+label: authenticated
+variant: block_display
+variant_settings:
+  blocks:
+    32ff2a0b-e687-47d6-8777-159916ddaf95:
+      id: add_phrase_block
+      label: 'Add Phrase'
+      provider: node
+      label_display: '0'
+      region: top
+      weight: 0
+      uuid: 32ff2a0b-e687-47d6-8777-159916ddaf95
+      context_mapping: {  }
+  id: block_display
+  label: null
+  uuid: a9bde442-37f0-47e8-96e1-73ed97f5cc33
+  weight: 0
+  page_title: 'Add Phrase'
+page: add_phrase
+weight: -9
+selection_criteria:
+  7c7464e2-935a-4f05-911d-63d03535f0ca:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: true
+    context_mapping:
+      user: current_user
+    uuid: 7c7464e2-935a-4f05-911d-63d03535f0ca
+selection_logic: and
+static_context: {  }
