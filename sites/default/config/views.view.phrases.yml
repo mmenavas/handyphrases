@@ -275,9 +275,9 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_spanish'
-  page_1:
+  translated_phrases:
     display_plugin: page
-    id: page_1
+    id: translated_phrases
     display_title: 'Translated Phrases'
     position: 1
     display_options:
@@ -378,15 +378,24 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_spanish'
-  page_2:
+  untranslated_phrases:
     display_plugin: page
-    id: page_2
+    id: untranslated_phrases
     display_title: 'Untranslated Phrases'
     position: 2
     display_options:
       display_extenders: {  }
       path: need-translation
       display_description: ''
+      menu:
+        type: normal
+        title: 'Need Translation'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 5
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: 0
       contexts:
