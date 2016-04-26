@@ -10,6 +10,11 @@ targetEntityType: node
 bundle: translation
 mode: default
 content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
   field_votes:
     type: number
     weight: 1
@@ -24,7 +29,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  created: true
   promote: true
   sticky: true
   uid: true

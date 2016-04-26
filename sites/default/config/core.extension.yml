@@ -1,7 +1,6 @@
 module:
   block: 0
   breakpoint: 0
-  color: 0
   config: 0
   contextual: 0
   ctools: 0
@@ -14,7 +13,9 @@ module:
   file: 0
   filter: 0
   handyphrases_blocks: 0
+  handyphrases_fields: 0
   handyphrases_utility: 0
+  layout_plugin: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -35,7 +36,7 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
   seven: 0
+  fingerprint: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU

@@ -1,4 +1,4 @@
-uuid: 398b5801-a258-4029-9512-1a8593940599
+uuid: 2382be0b-c8a2-4ff7-83e4-c56d67bbb1f0
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: mainnavigation
-theme: bartik
+    - fingerprint
+id: fingerprint_mainnavigation
+theme: fingerprint
 region: primary_menu
 weight: -3
 provider: null

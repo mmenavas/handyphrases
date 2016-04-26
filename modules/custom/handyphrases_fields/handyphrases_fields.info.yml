@@ -1,0 +1,7 @@
+name: HandyPhrases Fields
+type: module
+description: Adds custom fields, widgets and formatters.
+core: 8.x
+package: HandyPhrase
+dependencies:
+  - field

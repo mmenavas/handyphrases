@@ -1,11 +1,11 @@
-uuid: f410b026-086b-478a-82d0-e1f26fa926bd
+uuid: 668774d0-77dc-4abc-a135-b3d93a65a413
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
-id: pagetitle
-theme: bartik
+    - fingerprint
+id: fingerprint_pagetitle
+theme: fingerprint
 region: content
 weight: -3
 provider: null

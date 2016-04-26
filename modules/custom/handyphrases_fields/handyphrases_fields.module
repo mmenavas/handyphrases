@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains handyphrases_fields.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function handyphrases_fields_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the handyphrases_fields module.
+    case 'help.page.handyphrases_fields':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Adds custom fields, widgets and formatters.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function handyphrases_fields_theme() {
+  return array(
+    'translation_item' => array(
+      'variables' => array('translation' => NULL, 'votes' => NULL, 'timestamp' => NULL),
+    ),
+  );
+}

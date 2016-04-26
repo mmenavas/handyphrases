@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the fingerprint theme.
+ */
+
+/**
+ * Implements hook_preprocess_field() for html.html.twig.
+ */
+//function fingerprint_preprocess_field(&$variables, $hook) {
+//
+//  switch ($variables['element']['#field_name']) {
+//
+//  }
+//
+//}

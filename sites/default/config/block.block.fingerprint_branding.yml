@@ -1,15 +1,15 @@
-uuid: f4666e36-0685-4e1c-8f04-597ee5fe4282
+uuid: 6318bdc8-df3e-4ac0-880b-780f70b0a00e
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - fingerprint
 _core:
   default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
-id: bartik_branding
-theme: bartik
+id: fingerprint_branding
+theme: fingerprint
 region: header
 weight: 0
 provider: null

@@ -1,11 +1,11 @@
-uuid: d28748b3-3117-4832-b870-6c15fc60b6cd
+uuid: c9df6928-65f5-4e81-b954-eec4b16dca83
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
-id: tabs
-theme: bartik
+    - fingerprint
+id: fingerprint_tabs
+theme: fingerprint
 region: content
 weight: -3
 provider: null

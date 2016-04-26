@@ -9,14 +9,20 @@ dependencies:
     - field.field.node.phrase.field_translations
     - node.type.phrase
   module:
+    - handyphrases_fields
     - user
 id: node.phrase.full
 targetEntityType: node
 bundle: phrase
 mode: full
-content: {  }
+content:
+  field_translations:
+    type: translations_formatter
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_category: true
   field_disqus: true
-  field_translations: true
   links: true
