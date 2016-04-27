@@ -7,6 +7,7 @@ dependencies:
     - node.type.phrase
     - system.menu.main
   module:
+    - handyphrases_fields
     - node
     - user
 id: phrases
@@ -171,9 +172,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_entity_view
+          type: translations_formatter
           settings:
-            link: false
+            view_mode: translation
           group_column: target_id
           group_columns: {  }
           group_rows: true
