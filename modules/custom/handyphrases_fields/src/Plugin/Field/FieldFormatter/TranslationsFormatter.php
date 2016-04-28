@@ -37,6 +37,7 @@ class TranslationsFormatter extends EntityReferenceFormatterBase {
     foreach ($this->getEntitiesToView($items, $langcode) as $delta => $entity) {
       $elements[$delta] = array(
         '#theme' => 'translation_item',
+        '#nid' => $entity->id(),
         '#translation' => $entity->getTitle(),
         '#votes' => isset($entity->get('field_votes')->value) ? $entity->get('field_votes')->value : 0,
         '#timestamp' => $entity->getCreatedTime(),

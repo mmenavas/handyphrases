@@ -1,0 +1,6 @@
+vote:
+  version: VERSION
+  js:
+    js/ajax.js: {}
+  dependencies:
+    - core/drupal.ajax

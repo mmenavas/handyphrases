@@ -14,6 +14,7 @@ module:
   filter: 0
   handyphrases_blocks: 0
   handyphrases_fields: 0
+  handyphrases_rating: 0
   handyphrases_utility: 0
   layout_plugin: 0
   link: 0

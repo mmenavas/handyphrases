@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains handyphrases_rating.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function handyphrases_rating_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the handyphrases_rating module.
+    case 'help.page.handyphrases_rating':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Functionality to rate translations.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

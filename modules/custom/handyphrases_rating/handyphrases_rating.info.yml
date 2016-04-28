@@ -1,0 +1,5 @@
+name: HandyPhrases Rating
+type: module
+description: Functionality to rate translations.
+core: 8.x
+package: HandyPhrases

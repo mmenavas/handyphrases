@@ -29,7 +29,7 @@ function handyphrases_fields_help($route_name, RouteMatchInterface $route_match)
 function handyphrases_fields_theme() {
   return array(
     'translation_item' => array(
-      'variables' => array('translation' => NULL, 'votes' => NULL, 'timestamp' => NULL),
+      'variables' => array('nid' => NULL, 'translation' => NULL, 'votes' => NULL, 'timestamp' => NULL),
     ),
   );
 }
