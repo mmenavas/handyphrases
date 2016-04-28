@@ -1,4 +1,4 @@
-{% if vote %}
+{% if vote > 0 %}
   <span>Upvote by {{ uid }} on {{ timestamp }}</span>
 {% else %}
   <span>Downvote by {{ uid }} on {{ timestamp }}</span>

@@ -13,6 +13,7 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceFormatterBase;
+use Drupal\handyphrases_fields\VoteCountService;
 
 /**
  * Plugin implementation of the 'translations_formatter' formatter.
@@ -39,7 +40,7 @@ class TranslationsFormatter extends EntityReferenceFormatterBase {
         '#theme' => 'translation_item',
         '#nid' => $entity->id(),
         '#translation' => $entity->getTitle(),
-        '#votes' => isset($entity->get('field_votes')->value) ? $entity->get('field_votes')->value : 0,
+        '#votes' => VoteCountService::getVoteCount($entity),
         '#timestamp' => $entity->getCreatedTime(),
       );
     }

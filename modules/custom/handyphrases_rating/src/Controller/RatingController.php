@@ -13,6 +13,7 @@ use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\RemoveCommand;
 use Drupal\handyphrases_rating\Ajax\VoteCommand;
+use Drupal\handyphrases_fields\VoteCountService;
 
 /**
  * Class RatingController.
@@ -80,21 +81,37 @@ class RatingController extends ControllerBase {
   }
 
   private function upVote($nid) {
+    $user = \Drupal::currentUser();
     $node = $this->entity_type_manager->getStorage('node')->load($nid);
-    $votes = isset($node->get('field_votes')->value) ? $node->get('field_votes')->value : 0;
-    $node->set('field_votes', ++$votes);
+    $votes = $node->get('field_votes')->getValue();
+    $votes[] = [
+      'vote' => 1,
+      'uid' => $user->id(),
+      'timestamp' => REQUEST_TIME,
+    ];
+    $node->set('field_votes', $votes);
     $node->save();
 
-    return $votes;
+    $count = VoteCountService::getVoteCount($node);
+
+    return $count;
   }
 
   private function downVote($nid) {
+    $user = \Drupal::currentUser();
     $node = $this->entity_type_manager->getStorage('node')->load($nid);
-    $votes = isset($node->get('field_votes')->value) ? $node->get('field_votes')->value : 0;
-    $node->set('field_votes', --$votes);
+    $votes = $node->get('field_votes')->getValue();
+    $votes[] = [
+      'vote' => -1,
+      'uid' => $user->id(),
+      'timestamp' => REQUEST_TIME,
+    ];
+    $node->set('field_votes', $votes);
     $node->save();
 
-    return $votes;
+    $count = VoteCountService::getVoteCount($node);
+
+    return $count;
   }
 }
 
