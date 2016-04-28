@@ -31,5 +31,8 @@ function handyphrases_fields_theme() {
     'translation_item' => array(
       'variables' => array('nid' => NULL, 'translation' => NULL, 'votes' => NULL, 'timestamp' => NULL),
     ),
+    'vote' => array(
+      'variables' => array('vote' => NULL, 'uid' => NULL, 'timestamp' => NULL),
+    ),
   );
 }
