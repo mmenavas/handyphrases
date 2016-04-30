@@ -1,5 +1,0 @@
-name: HandyPhrases Utility
-type: module
-description: Tools for building HandyPhrases
-core: 8.x
-package: HandyPhrases

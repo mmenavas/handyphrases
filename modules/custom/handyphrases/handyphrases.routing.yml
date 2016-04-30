@@ -1,8 +1,8 @@
-handyphrases_utility.bulk_node_create:
+handyphrases.bulk_node_create:
   path: '/admin/config/handyphrases-utility/bulk-node-create'
   defaults:
     _title: 'Bulk Node Create'
-    _form: '\Drupal\handyphrases_utility\Form\BulkNodeCreate'
+    _form: '\Drupal\handyphrases\Form\BulkNodeCreate'
   requirements:
     _permission: 'access administration pages'
   options:

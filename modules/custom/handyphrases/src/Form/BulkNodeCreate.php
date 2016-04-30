@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\handyphrases_utility\Form\BulkNodeCreate.
+ * Contains \Drupal\handyphrases\Form\BulkNodeCreate.
  */
 
-namespace Drupal\handyphrases_utility\Form;
+namespace Drupal\handyphrases\Form;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\FormBase;
@@ -15,7 +15,7 @@ use Drupal\node\Entity\Node;
 /**
  * Class BulkNodeCreate.
  *
- * @package Drupal\handyphrases_utility\Form
+ * @package Drupal\handyphrases\Form
  */
 class BulkNodeCreate extends FormBase {
 
@@ -23,7 +23,7 @@ class BulkNodeCreate extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'handyphrases_utility_bulk_node_create';
+    return 'handyphrases_bulk_node_create';
   }
 
   /**
