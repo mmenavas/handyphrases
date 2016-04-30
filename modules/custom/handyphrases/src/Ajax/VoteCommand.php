@@ -1,9 +1,9 @@
 <?php
 /**
  * @file
- * Contains \Drupal\handyphrases_rating\Ajax\VoteCommand.php
+ * Contains \Drupal\handyphrases\Ajax\VoteCommand.php
  */
-namespace Drupal\handyphrases_rating\Ajax;
+namespace Drupal\handyphrases\Ajax;
 
 use Drupal\Core\Ajax\CommandInterface;
 

@@ -2,16 +2,16 @@
 
 /**
  * @file
- * Contains \Drupal\handyphrases_rating\Tests\RatingController.
+ * Contains \Drupal\handyphrases\Tests\RatingController.
  */
 
-namespace Drupal\handyphrases_rating\Tests;
+namespace Drupal\handyphrases\Tests;
 
 use Drupal\simpletest\WebTestBase;
 use Drupal\Core\Entity\EntityTypeManager;
 
 /**
- * Provides automated tests for the handyphrases_rating module.
+ * Provides automated tests for the handyphrases module.
  */
 class RatingControllerTest extends WebTestBase {
 
@@ -26,8 +26,8 @@ class RatingControllerTest extends WebTestBase {
    */
   public static function getInfo() {
     return array(
-      'name' => "handyphrases_rating RatingController's controller functionality",
-      'description' => 'Test Unit for module handyphrases_rating and controller RatingController.',
+      'name' => "Handyphrases Controller's controller functionality",
+      'description' => 'Test Unit for module handyphrases and controller RatingController.',
       'group' => 'Other',
     );
   }
@@ -40,10 +40,10 @@ class RatingControllerTest extends WebTestBase {
   }
 
   /**
-   * Tests handyphrases_rating functionality.
+   * Tests handyphrases functionality.
    */
   public function testRatingController() {
-    // Check that the basic functions of module handyphrases_rating.
+    // Check that the basic functions of module handyphrases.
     $this->assertEquals(TRUE, TRUE, 'Test Unit Generated via App Console.');
   }
 

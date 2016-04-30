@@ -2,23 +2,23 @@
 
 /**
  * @file
- * Contains \Drupal\handyphrases_rating\Controller\RatingController.
+ * Contains \Drupal\handyphrases\Controller\RatingController.
  */
 
-namespace Drupal\handyphrases_rating\Controller;
+namespace Drupal\handyphrases\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\RemoveCommand;
-use Drupal\handyphrases_rating\Ajax\VoteCommand;
+use Drupal\handyphrases\Ajax\VoteCommand;
 use Drupal\handyphrases_fields\VoteCountService;
 
 /**
  * Class RatingController.
  *
- * @package Drupal\handyphrases_rating\Controller
+ * @package Drupal\handyphrases\Controller
  */
 class RatingController extends ControllerBase {
 

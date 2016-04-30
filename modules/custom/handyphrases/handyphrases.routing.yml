@@ -1,5 +1,5 @@
 handyphrases.bulk_node_create:
-  path: '/admin/config/handyphrases-utility/bulk-node-create'
+  path: '/admin/config/handyphrases/bulk-node-create'
   defaults:
     _title: 'Bulk Node Create'
     _form: '\Drupal\handyphrases\Form\BulkNodeCreate'
@@ -7,3 +7,14 @@ handyphrases.bulk_node_create:
     _permission: 'access administration pages'
   options:
     _admin_route: TRUE
+
+handyphrases.upvote:
+  path: 'handyphrases/{op}/{nid}/{method}'
+  defaults:
+    _controller: '\Drupal\handyphrases\Controller\RatingController::vote'
+    _title: 'Vote'
+  requirements:
+    _permission: 'create translation content'
+    op: 'upvote|downvote'
+    method: 'nojs|ajax'
+
