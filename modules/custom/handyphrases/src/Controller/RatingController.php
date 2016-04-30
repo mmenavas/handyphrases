@@ -83,13 +83,11 @@ class RatingController extends ControllerBase {
   private function upVote($nid) {
     $user = \Drupal::currentUser();
     $node = $this->entity_type_manager->getStorage('node')->load($nid);
-    $votes = $node->get('field_votes')->getValue();
-    $votes[] = [
+    $node->get('field_votes')->appendItem([
       'vote' => 1,
       'uid' => $user->id(),
       'timestamp' => REQUEST_TIME,
-    ];
-    $node->set('field_votes', $votes);
+    ]);
     $node->save();
 
     $count = VoteCountService::getVoteCount($node);
@@ -100,13 +98,11 @@ class RatingController extends ControllerBase {
   private function downVote($nid) {
     $user = \Drupal::currentUser();
     $node = $this->entity_type_manager->getStorage('node')->load($nid);
-    $votes = $node->get('field_votes')->getValue();
-    $votes[] = [
+    $node->get('field_votes')->appendItem([
       'vote' => -1,
       'uid' => $user->id(),
       'timestamp' => REQUEST_TIME,
-    ];
-    $node->set('field_votes', $votes);
+    ]);
     $node->save();
 
     $count = VoteCountService::getVoteCount($node);

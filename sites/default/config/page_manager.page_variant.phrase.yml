@@ -6,6 +6,7 @@ dependencies:
     - page_manager.page.content_type
   module:
     - ctools
+    - handyphrases
 id: phrase
 label: Phrase
 variant: block_display
@@ -22,6 +23,15 @@ variant_settings:
       uuid: 69db0fa4-8278-45f8-89c4-558a71372105
       context_mapping:
         entity: node
+    5f341349-a923-44d1-a100-1fe248d60518:
+      id: create_translation_block
+      label: 'Propose a translation'
+      provider: handyphrases
+      label_display: visible
+      region: top
+      weight: 0
+      uuid: 5f341349-a923-44d1-a100-1fe248d60518
+      context_mapping: {  }
   id: block_display
   label: null
   uuid: 8949380d-5b9b-4aba-8ba0-0645448ec6ee

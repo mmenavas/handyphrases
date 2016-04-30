@@ -17,13 +17,13 @@ use Drupal\node\Entity\Node;
  *
  * @package Drupal\handyphrases\Form
  */
-class BulkNodeCreate extends FormBase {
+class BulkNodeCreateForm extends FormBase {
 
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'handyphrases_bulk_node_create';
+    return 'handyphrases_node_create_form';
   }
 
   /**
