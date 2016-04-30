@@ -42,6 +42,9 @@ class TranslationsFormatter extends EntityReferenceFormatterBase {
         '#translation' => $entity->getTitle(),
         '#votes' => VoteCountService::getVoteCount($entity),
         '#timestamp' => $entity->getCreatedTime(),
+        '#cache' => [
+          'tags' => ['node:' . $entity->id()],
+        ],
       );
     }
 
