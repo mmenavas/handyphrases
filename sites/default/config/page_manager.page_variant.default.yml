@@ -1,0 +1,21 @@
+uuid: b8e4fe66-af3d-44c0-aa33-881a9df776a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.content_type
+id: default
+label: Default
+variant: block_display
+variant_settings:
+  blocks: {  }
+  id: block_display
+  label: null
+  uuid: 23129413-fdbd-49a3-8317-943150c61db8
+  weight: 0
+  page_title: '[node:title]'
+page: content_type
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

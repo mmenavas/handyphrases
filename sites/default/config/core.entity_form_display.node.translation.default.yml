@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.translation.field_votes
     - node.type.translation
+  module:
+    - handyphrases_fields
 id: node.translation.default
 targetEntityType: node
 bundle: translation
@@ -16,11 +18,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_votes:
-    type: number
     weight: 1
-    settings:
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
+    type: vote_widget
   title:
     type: string_textfield
     weight: 0

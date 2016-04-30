@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.translation.field_votes
     - node.type.translation
   module:
+    - handyphrases_fields
     - user
 id: node.translation.default
 targetEntityType: node
@@ -13,12 +14,10 @@ bundle: translation
 mode: default
 content:
   field_votes:
-    weight: 0
-    label: hidden
-    settings:
-      thousand_separator: "\t"
-      prefix_suffix: true
+    weight: 1
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    type: number_integer
+    type: vote_formatter
 hidden:
   links: true

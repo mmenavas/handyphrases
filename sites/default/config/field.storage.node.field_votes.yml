@@ -1,19 +1,18 @@
-uuid: 7f23c6ac-067a-4e6d-ae9d-b9f1f150e02d
+uuid: 7c63242b-b253-46c2-b8fb-6a60571f892b
 langcode: en
 status: true
 dependencies:
   module:
+    - handyphrases_fields
     - node
 id: node.field_votes
 field_name: field_votes
 entity_type: node
-type: integer
-settings:
-  unsigned: false
-  size: normal
-module: core
+type: vote
+settings: {  }
+module: handyphrases_fields
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

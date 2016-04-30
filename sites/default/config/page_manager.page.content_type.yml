@@ -1,0 +1,11 @@
+uuid: 75809510-c4de-4250-bf5a-3e1f0dfa28bd
+langcode: en
+status: true
+dependencies: {  }
+id: content_type
+label: 'Content Type'
+use_admin_theme: null
+path: '/node/{node}'
+access_logic: and
+access_conditions: {  }
+parameters: {  }
