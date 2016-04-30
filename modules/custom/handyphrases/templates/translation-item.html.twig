@@ -1,0 +1,7 @@
+{{ attach_library('handyphrases/vote') }}
+
+<h3>{{ translation }}</h3>
+<div id="translation-{{ nid }}-vote-count">{{ votes }}</div>
+<a href="/handyphrases/upvote/{{ nid }}/nojs" class="translation-upvote use-ajax">Up Vote</a>
+<a href="/handyphrases/downvote/{{ nid }}/nojs" class="translation-downvote use-ajax">Down Vote</a>
+

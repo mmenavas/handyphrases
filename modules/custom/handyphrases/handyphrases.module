@@ -22,3 +22,17 @@ function handyphrases_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function handyphrases_theme() {
+  return array(
+    'translation_item' => array(
+      'variables' => array('nid' => NULL, 'translation' => NULL, 'votes' => NULL, 'timestamp' => NULL),
+    ),
+    'vote' => array(
+      'variables' => array('vote' => NULL, 'uid' => NULL, 'timestamp' => NULL),
+    ),
+  );
+}

@@ -1,0 +1,4 @@
+services:
+  handyphrases.vote_count:
+    class: Drupal\handyphrases\VoteCountService
+

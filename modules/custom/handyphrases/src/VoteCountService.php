@@ -2,16 +2,16 @@
 
 /**
  * @file
- * Contains \Drupal\handyphrases_fields\VoteCountService.
+ * Contains \Drupal\handyphrases\VoteCountService.
  */
 
-namespace Drupal\handyphrases_fields;
+namespace Drupal\handyphrases;
 
 
 /**
  * Class VoteCountService.
  *
- * @package Drupal\handyphrases_fields
+ * @package Drupal\handyphrases
  */
 class VoteCountService {
 

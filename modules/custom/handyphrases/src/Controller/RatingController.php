@@ -13,7 +13,7 @@ use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\RemoveCommand;
 use Drupal\handyphrases\Ajax\VoteCommand;
-use Drupal\handyphrases_fields\VoteCountService;
+use Drupal\handyphrases\VoteCountService;
 
 /**
  * Class RatingController.

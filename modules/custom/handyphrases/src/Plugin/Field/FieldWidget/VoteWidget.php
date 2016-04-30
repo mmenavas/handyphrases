@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\handyphrases_fields\Plugin\Field\FieldWidget\VoteWidget.
+ * Contains \Drupal\handyphrases\Plugin\Field\FieldWidget\VoteWidget.
  */
 
-namespace Drupal\handyphrases_fields\Plugin\Field\FieldWidget;
+namespace Drupal\handyphrases\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;

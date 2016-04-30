@@ -15,7 +15,7 @@ variant_settings:
   weight: 0
   page_title: '[node:title]'
 page: content_type
-weight: 0
+weight: -9
 selection_criteria: {  }
 selection_logic: and
 static_context: {  }

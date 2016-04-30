@@ -1,4 +1,0 @@
-services:
-  handyphrases_fields.vote_count:
-    class: Drupal\handyphrases_fields\VoteCountService
-

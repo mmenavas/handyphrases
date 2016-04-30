@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\handyphrases_fields\Plugin\Field\FieldFormatter\TranslationsFormatter.
+ * Contains \Drupal\handyphrases\Plugin\Field\FieldFormatter\TranslationsFormatter.
  */
 
-namespace Drupal\handyphrases_fields\Plugin\Field\FieldFormatter;
+namespace Drupal\handyphrases\Plugin\Field\FieldFormatter;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Field\FieldItemInterface;
@@ -13,7 +13,7 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceFormatterBase;
-use Drupal\handyphrases_fields\VoteCountService;
+use Drupal\handyphrases\VoteCountService;
 
 /**
  * Plugin implementation of the 'translations_formatter' formatter.

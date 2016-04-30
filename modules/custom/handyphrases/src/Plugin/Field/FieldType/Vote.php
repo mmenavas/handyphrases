@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\handyphrases_fields\Plugin\Field\FieldType\Vote.
+ * Contains \Drupal\handyphrases\Plugin\Field\FieldType\Vote.
  */
 
-namespace Drupal\handyphrases_fields\Plugin\Field\FieldType;
+namespace Drupal\handyphrases\Plugin\Field\FieldType;
 
 use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;

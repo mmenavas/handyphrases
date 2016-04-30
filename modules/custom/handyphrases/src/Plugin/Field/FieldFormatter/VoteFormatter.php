@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\handyphrases_fields\Plugin\Field\FieldFormatter\VoteFormatter.
+ * Contains \Drupal\handyphrases\Plugin\Field\FieldFormatter\VoteFormatter.
  */
 
-namespace Drupal\handyphrases_fields\Plugin\Field\FieldFormatter;
+namespace Drupal\handyphrases\Plugin\Field\FieldFormatter;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Field\FieldItemInterface;

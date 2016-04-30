@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: content_type
 label: 'Content Type'
-use_admin_theme: null
+use_admin_theme: false
 path: '/node/{node}'
 access_logic: and
 access_conditions: {  }

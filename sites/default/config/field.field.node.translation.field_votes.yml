@@ -1,4 +1,4 @@
-uuid: 5a2826aa-d5eb-46d6-8530-e1818a82594b
+uuid: fd3186fb-941e-4452-bc5a-ab49fa31a406
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_votes
     - node.type.translation
   module:
-    - handyphrases_fields
+    - handyphrases
 id: node.translation.field_votes
 field_name: field_votes
 entity_type: node

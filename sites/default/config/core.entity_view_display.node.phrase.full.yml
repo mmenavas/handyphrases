@@ -1,4 +1,4 @@
-uuid: cbb01b40-157f-4109-80d7-2c121b9f960b
+uuid: 365050dc-3f89-4d9f-8e46-278ffbd42b8f
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.phrase.field_translations
     - node.type.phrase
   module:
-    - handyphrases_fields
+    - handyphrases
     - user
 id: node.phrase.full
 targetEntityType: node
@@ -17,11 +17,11 @@ bundle: phrase
 mode: full
 content:
   field_translations:
-    type: translations_formatter
-    weight: 0
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
+    type: translations_formatter
 hidden:
   field_category: true
   field_disqus: true

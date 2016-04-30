@@ -7,7 +7,7 @@ dependencies:
     - node.type.phrase
     - system.menu.main
   module:
-    - handyphrases_fields
+    - handyphrases
     - node
     - user
 id: phrases

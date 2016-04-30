@@ -28,7 +28,7 @@ variant_settings:
   weight: 0
   page_title: '[node:title]'
 page: content_type
-weight: 0
+weight: -10
 selection_criteria:
   6ea93dba-c27a-47fb-b820-2bbb436fb28f:
     id: 'entity_bundle:node'
