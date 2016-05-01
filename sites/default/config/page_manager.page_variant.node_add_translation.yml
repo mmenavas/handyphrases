@@ -1,0 +1,30 @@
+uuid: b67d18b4-ff10-4a9f-8491-2ae53ed5c6da
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.add_translation
+  module:
+    - user
+id: node_add_translation
+label: node_add_translation
+variant: http_status_code
+variant_settings:
+  id: http_status_code
+  label: null
+  uuid: ''
+  weight: 0
+  status_code: 403
+page: add_translation
+weight: 0
+selection_criteria:
+  f2586800-de60-495d-927c-5bfab4f77fbc:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: true
+    context_mapping:
+      user: current_user
+    uuid: f2586800-de60-495d-927c-5bfab4f77fbc
+selection_logic: and
+static_context: {  }

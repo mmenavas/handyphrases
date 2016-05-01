@@ -9,7 +9,7 @@ features:
   favicon: false
   node_user_picture: false
 logo:
-  path: ''
+  path: themes/custom/zircon/logo.png
   url: ''
   use_default: false
 _core:

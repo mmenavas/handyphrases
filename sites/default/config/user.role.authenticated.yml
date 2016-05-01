@@ -14,3 +14,4 @@ permissions:
   4: 'view disqus comments'
   5: 'use  The form mode add_phrase linked to  node entity( phrase )'
   6: 'create translation content'
+  7: 'search content'

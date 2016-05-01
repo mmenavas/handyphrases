@@ -1,0 +1,28 @@
+uuid: 60c90753-0b05-4b42-a254-af8736fb49fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.phrase
+    - taxonomy.vocabulary.tags
+id: node.phrase.field_tags
+field_name: field_tags
+entity_type: node
+bundle: phrase
+label: Tags
+description: 'Tags describe specific details of your phrase (i.e. Pharmacy, Cookware, Toiletries). Separate tags with commas. As you type a tag, a suggestion might be provided. If no suggestions are provided, new tags will be added to our system.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

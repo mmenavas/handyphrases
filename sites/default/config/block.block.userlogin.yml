@@ -1,0 +1,20 @@
+uuid: 705297a2-05b1-4bea-8a08-b59391e052bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - zircon
+id: userlogin
+theme: zircon
+region: sidebar_second
+weight: -3
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'Log in to create and translate phrases'
+  provider: user
+  label_display: visible
+visibility: {  }

@@ -1,9 +1,9 @@
-uuid: da4c4e20-b8ac-41cb-9866-4192d5ff9329
+uuid: c30313ce-1635-42c7-9d15-05b6f711dcbd
 langcode: en
 status: false
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.search_index
     - field.field.node.phrase.field_category
     - field.field.node.phrase.field_disqus
     - field.field.node.phrase.field_tags
@@ -11,15 +11,21 @@ dependencies:
     - node.type.phrase
   module:
     - user
-id: node.phrase.teaser
+id: node.phrase.search_index
 targetEntityType: node
 bundle: phrase
-mode: teaser
+mode: search_index
 content:
-  links:
-    weight: 100
+  field_translations:
+    weight: 1
+    label: above
+    settings:
+      view_mode: translation
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
 hidden:
   field_category: true
   field_disqus: true
   field_tags: true
-  field_translations: true
+  links: true

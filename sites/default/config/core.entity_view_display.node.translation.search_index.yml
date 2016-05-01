@@ -1,0 +1,24 @@
+uuid: a43827de-8224-4861-bca7-2f2bd869cacc
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.translation.field_votes
+    - node.type.translation
+  module:
+    - handyphrases
+    - user
+id: node.translation.search_index
+targetEntityType: node
+bundle: translation
+mode: search_index
+content:
+  field_votes:
+    type: vote_formatter
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

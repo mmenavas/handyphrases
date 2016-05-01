@@ -18,10 +18,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_votes:
-    weight: 26
+    type: vote_widget
+    weight: 1
     settings: {  }
     third_party_settings: {  }
-    type: vote_widget
   title:
     type: string_textfield
     weight: 0
@@ -29,7 +29,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   promote: true
   sticky: true
-  uid: true

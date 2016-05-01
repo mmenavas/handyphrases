@@ -1,11 +1,11 @@
-uuid: c9df6928-65f5-4e81-b954-eec4b16dca83
+uuid: 9e42d2c0-2fe9-4967-a84c-98856ba73d75
 langcode: en
 status: true
 dependencies:
   theme:
-    - fingerprint
-id: fingerprint_tabs
-theme: fingerprint
+    - zircon
+id: zircon_tabs
+theme: zircon
 region: content
 weight: -2
 provider: null

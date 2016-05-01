@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.phrase.field_category
     - field.field.node.phrase.field_disqus
+    - field.field.node.phrase.field_tags
     - field.field.node.phrase.field_translations
     - node.type.phrase
   module:
@@ -15,7 +16,7 @@ bundle: phrase
 mode: default
 content:
   field_translations:
-    weight: 1
+    weight: 0
     label: above
     settings:
       view_mode: translation
@@ -25,4 +26,5 @@ content:
 hidden:
   field_category: true
   field_disqus: true
+  field_tags: true
   links: true

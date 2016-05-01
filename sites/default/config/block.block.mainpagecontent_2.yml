@@ -1,0 +1,20 @@
+uuid: 355a2f0e-5c9d-4c4d-988e-cf8ac5cd65e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zircon
+id: mainpagecontent_2
+theme: zircon
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

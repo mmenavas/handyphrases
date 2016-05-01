@@ -1,4 +1,4 @@
-uuid: 2382be0b-c8a2-4ff7-83e4-c56d67bbb1f0
+uuid: 9f28923f-7d70-4b91-a972-bd2c88f0cd14
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
   module:
     - system
   theme:
-    - fingerprint
-id: fingerprint_mainnavigation
-theme: fingerprint
-region: primary_menu
+    - zircon
+id: zircon_mainnavigation
+theme: zircon
+region: main_menu
 weight: -2
 provider: null
 plugin: 'system_menu_block:main'

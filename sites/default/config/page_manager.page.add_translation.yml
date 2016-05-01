@@ -1,0 +1,11 @@
+uuid: e482c098-410a-44ad-8518-acd2dd931b18
+langcode: en
+status: true
+dependencies: {  }
+id: add_translation
+label: 'Add Translation'
+use_admin_theme: false
+path: /node/add/translation
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.phrase.field_category
     - field.field.node.phrase.field_disqus
+    - field.field.node.phrase.field_tags
     - field.field.node.phrase.field_translations
     - node.type.phrase
 id: node.phrase.default
@@ -17,14 +18,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-  field_translations:
-    weight: 26
+  field_tags:
+    weight: 27
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
   title:
     type: string_textfield
     weight: 0
@@ -35,6 +36,7 @@ content:
 hidden:
   created: true
   field_disqus: true
+  field_translations: true
   promote: true
   sticky: true
   uid: true
