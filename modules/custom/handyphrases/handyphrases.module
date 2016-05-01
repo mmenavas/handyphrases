@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_help().
@@ -35,4 +36,23 @@ function handyphrases_theme() {
       'variables' => array('vote' => NULL, 'uid' => NULL, 'timestamp' => NULL),
     ),
   );
+}
+
+/**
+ * Implements hook_form_ID_alter().
+ */
+function handyphrases_form_node_phrase_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['title']['widget'][0]['value']['#title'] = t('Phrase');
+  $form['title']['widget'][0]['value']['#description'] = t('Phrase in English. Limited to 255 characters.');
+}
+
+
+/**
+ * Implements hook_form_ID_alter().
+ */
+function handyphrases_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-phrases-translated-phrases') {
+    $form['title']['#size'] = 60;
+    $form['field_tags_target_id']['#size'] = 30;
+  }
 }

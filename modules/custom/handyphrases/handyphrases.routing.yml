@@ -8,6 +8,16 @@ handyphrases.bulk_node_create:
   options:
     _admin_route: TRUE
 
+handyphrases.bulk_term_create:
+  path: '/admin/config/handyphrases/bulk-term-create'
+  defaults:
+    _title: 'Bulk Term Create'
+    _form: '\Drupal\handyphrases\Form\BulkTaxonomyTermCreateForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
 handyphrases.upvote:
   path: 'handyphrases/{op}/{nid}/{method}'
   defaults:

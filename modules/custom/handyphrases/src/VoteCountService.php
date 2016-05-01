@@ -37,7 +37,11 @@ class VoteCountService {
   public static function isVotingDisabled($node) {
     $isDisabled = FALSE;
     $user = \Drupal::currentUser();
-    
+
+    // Keep anonymous users from voting
+    if ($user->isAnonymous()) {
+      return TRUE;
+    }
     // Keep translation author from voting on his own translation
     if ($node->getOwnerId() == $user->id()) {
       return TRUE;

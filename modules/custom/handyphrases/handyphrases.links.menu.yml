@@ -3,3 +3,9 @@ handyphrases.bulk_node_create:
   parent: system.admin_config_development
   description: 'Admin page to create nodes in bulk.'
   route_name: handyphrases.bulk_node_create
+
+handyphrases.bulk_term_create:
+  title: 'Bulk Taxonomy Term Create'
+  parent: system.admin_config_development
+  description: 'Admin page to create terms in bulk.'
+  route_name: handyphrases.bulk_term_create

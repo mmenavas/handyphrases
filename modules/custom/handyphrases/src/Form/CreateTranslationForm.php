@@ -31,13 +31,17 @@ class CreateTranslationForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
 
     $form['translation'] = array(
+      '#type' => 'fieldset',
+      '#attributes' => array('class' => array('container-inline'))
+    );
+    $form['translation']['title'] = array(
       '#type' => 'textfield',
       '#default_value' => '',
-      '#required' => TRUE
+      '#required' => TRUE,
     );
-    $form['submit'] = array(
+    $form['translation']['submit'] = array(
       '#type' => 'submit',
-      '#value' => t('Save')
+      '#value' => t('Save'),
     );
 
     return $form;
@@ -57,7 +61,7 @@ class CreateTranslationForm extends FormBase {
     $node = \Drupal::routeMatch()->getParameter('node');
     $node_type = $node->getType();
     $nid = $node->id();
-    $title = $form_state->getValue('translation');
+    $title = $form_state->getValue('title');
 
     if ($title && $node_type == 'phrase') {
 
