@@ -71,7 +71,7 @@ class CreateTranslationForm extends FormBase {
       if ($translation->id()) {
         $node->get('field_translations')->appendItem($translation->id());
         $node->save();
-        drupal_set_message(t("Thanks for your contributing."), 'status');
+        drupal_set_message(t("Thank you for your contribution."), 'status');
       }
 
     }

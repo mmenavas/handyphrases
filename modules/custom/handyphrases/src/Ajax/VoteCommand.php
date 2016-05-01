@@ -23,6 +23,12 @@ class VoteCommand implements CommandInterface {
    */
   protected $selector;
   /**
+   * Operation (upvote or downvote)
+   *
+   * @var string|integer
+   */
+  protected $op;
+  /**
    * Number of votes
    *
    * @var string|integer
@@ -36,8 +42,9 @@ class VoteCommand implements CommandInterface {
    * @param integer $votes
    *   The votes count.
    */
-  public function __construct($selector, $votes = 0) {
+  public function __construct($selector = '', $op = '' , $votes = 0) {
     $this->selector = $selector;
+    $this->op = $op;
     $this->votes = $votes;
   }
   /**
@@ -51,6 +58,7 @@ class VoteCommand implements CommandInterface {
       'command' => 'vote',
       // All other elements will be returned as part of the response argument.
       'selector' => $this->selector,
+      'op' => $this->op,
       'votes' => $this->votes,
     );
   }

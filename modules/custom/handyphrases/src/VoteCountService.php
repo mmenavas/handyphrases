@@ -21,15 +21,39 @@ class VoteCountService {
    * @param $translation Node entity
    * @return int
    */
-  public static function getVoteCount($translation) {
+  public static function getVoteCount($node, $vote) {
     $count = 0;
-    $field = $translation->get('field_votes');
+    $field = $node->get('field_votes');
 
     foreach ($field->getValue() as $delta => $item) {
-      $count = $count + intval($item['vote']);
+      if ($item['vote'] == $vote) {
+        $count++;
+      }
     }
 
     return $count;
+  }
+  
+  public static function isVotingDisabled($node) {
+    $isDisabled = FALSE;
+    $user = \Drupal::currentUser();
+    
+    // Keep translation author from voting on his own translation
+    if ($node->getOwnerId() == $user->id()) {
+      return TRUE;
+    }
+      
+    $field = $node->get('field_votes');
+    
+    foreach ($field->getValue() as $delta => $item) {
+      if ($item['uid'] == $user->id()) {
+        $isDisabled = TRUE;
+        continue;
+      }
+    }
+    
+    return $isDisabled;
+
   }
 
 }

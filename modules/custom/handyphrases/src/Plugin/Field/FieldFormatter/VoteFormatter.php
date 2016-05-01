@@ -35,8 +35,8 @@ class VoteFormatter extends FormatterBase {
       $elements[$delta] = array(
         '#theme' => 'vote',
         '#vote' => $item->vote,
-        '#uid' => $item-uid, // TODO: Load user entity
-        '#timestamp' => $item->timestamp, //TODO: Format timestamp
+        '#uid' => $item->uid,
+        '#timestamp' => $item->timestamp,
       );
     }
 

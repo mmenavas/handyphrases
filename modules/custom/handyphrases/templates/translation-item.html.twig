@@ -1,7 +1,24 @@
 {{ attach_library('handyphrases/vote') }}
+{{ attach_library('fingerprint/font-awesome') }}
 
-<h3>{{ translation }}</h3>
-<div id="translation-{{ nid }}-vote-count">{{ votes }}</div>
-<a href="/handyphrases/upvote/{{ nid }}/nojs" class="translation-upvote use-ajax">Up Vote</a>
-<a href="/handyphrases/downvote/{{ nid }}/nojs" class="translation-downvote use-ajax">Down Vote</a>
-
+<div class="translation translation_id_{{ nid }}">
+  <h3 class="translation__title">{{ translation }}</h3>
+  <div class="translation__votes">
+    <div class="vote vote_type_upvote translation__upvote">
+      <span class="vote__count">{{ upvotes }}</span>
+      {% if disabled %}
+        <span class="vote__button-wrapper"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></span>
+      {% else %}
+         <span class="vote__button-wrapper"><a class="vote__button vote__button__type_upvote use-ajax" href="/handyphrases/upvote/{{ nid }}/nojs" class="translation-upvote use-ajax"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a></span>
+      {% endif %}
+    </div>
+    <div class="vote vote_type_downvote translation__downvote">
+      <span class="vote__count">{{ downvotes }}</span>
+      {% if disabled %}
+        <span class="vote__button-wrapper"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></span>
+      {% else %}
+        <span class="vote__button-wrapper"><a class="vote__button vote__button__type_downvote use-ajax" href="/handyphrases/downvote/{{ nid }}/nojs" class="translation-downvote use-ajax"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></a></span>
+      {% endif %}
+    </div>
+  </div>
+</div>

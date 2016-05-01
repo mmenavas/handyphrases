@@ -52,14 +52,14 @@ class RatingController extends ControllerBase {
    */
   public function vote($nid, $op, $method = 'nojs') {
 
-    $selector = "#translation-$nid-vote-count";
+    $selector = ".translation_id_$nid";
     $votes = 0;
 
     if ($op == 'upvote') {
-      $votes = $this->upVote($nid);
+      $votes = $this->upvote($nid);
     }
     else if ($op = 'downvote') {
-      $votes = $this->downVote($nid);
+      $votes = $this->downvote($nid);
     }
 
     // Part of graceful degradation, check to see if request method was 'ajax'.
@@ -67,7 +67,7 @@ class RatingController extends ControllerBase {
       // Create a new AjaxResponse object.
       $response = new AjaxResponse();
       // Create and add instance of custom SlideRemoveCommand.
-      $response->addCommand(new VoteCommand($selector, $votes));
+      $response->addCommand(new VoteCommand($selector, $op, $votes));
       return $response;
     }
     // Non-ajax call to this callback.
@@ -80,9 +80,16 @@ class RatingController extends ControllerBase {
 
   }
 
-  private function upVote($nid) {
-    $user = \Drupal::currentUser();
+  private function upvote($nid) {
     $node = $this->entity_type_manager->getStorage('node')->load($nid);
+    
+    if (VoteCountService::isVotingDisabled($node)) {
+      // Keep user from voting for his own translation or from
+      // voting twice for the same translation.
+      return;
+    }
+    
+    $user = \Drupal::currentUser();
     $node->get('field_votes')->appendItem([
       'vote' => 1,
       'uid' => $user->id(),
@@ -90,14 +97,21 @@ class RatingController extends ControllerBase {
     ]);
     $node->save();
 
-    $count = VoteCountService::getVoteCount($node);
+    $count = VoteCountService::getVoteCount($node, 1);
 
     return $count;
   }
 
-  private function downVote($nid) {
-    $user = \Drupal::currentUser();
+  private function downvote($nid) {
     $node = $this->entity_type_manager->getStorage('node')->load($nid);
+
+    if (VoteCountService::isVotingDisabled($node)) {
+      // Keep user from voting for his own translation or from
+      // voting twice for the same translation.
+      return;
+    }
+    
+    $user = \Drupal::currentUser();
     $node->get('field_votes')->appendItem([
       'vote' => -1,
       'uid' => $user->id(),
@@ -105,7 +119,7 @@ class RatingController extends ControllerBase {
     ]);
     $node->save();
 
-    $count = VoteCountService::getVoteCount($node);
+    $count = VoteCountService::getVoteCount($node, -1);
 
     return $count;
   }

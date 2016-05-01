@@ -35,22 +35,27 @@ class TranslationsFormatter extends EntityReferenceFormatterBase {
     $elements = [];
 
     // Prepare render arrays
-    foreach ($this->getEntitiesToView($items, $langcode) as $delta => $entity) {
+    foreach ($this->getEntitiesToView($items, $langcode) as $delta => $node) {
       $elements[$delta] = array(
         '#theme' => 'translation_item',
-        '#nid' => $entity->id(),
-        '#translation' => $entity->getTitle(),
-        '#votes' => VoteCountService::getVoteCount($entity),
-        '#timestamp' => $entity->getCreatedTime(),
+        '#nid' => $node->id(), // Translation node
+        '#translation' => $node->getTitle(),
+        '#upvotes' => VoteCountService::getVoteCount($node, 1),
+        '#downvotes' => VoteCountService::getVoteCount($node, -1),
+        '#timestamp' => $node->getCreatedTime(),
+        '#disabled' => VoteCountService::isVotingDisabled($node),
         '#cache' => [
-          'tags' => ['node:' . $entity->id()],
+          'tags' => ['node:' . $node->id()],
         ],
       );
     }
 
     // sort by Votes using anonymous function
     usort($elements, function($a, $b) {
-      $diff = $b['#votes'] - $a['#votes'];
+      $diff = $b['#upvotes'] - $a['#upvotes'];
+      if ($diff == 0) {
+        $diff = $a['#downvotes'] - $b['#downvotes'];
+      }
       if ($diff == 0) {
         $diff = $a['#timestamp'] - $b['#timestamp'];
       }
