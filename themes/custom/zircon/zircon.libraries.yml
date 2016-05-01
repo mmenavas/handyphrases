@@ -2,7 +2,7 @@ global-styling:
   version: 8.0.0
   css:
     base:
-      css/style.css: {}
+#      css/style.css: {}
       includes/bootstrap/css/bootstrap.css: {}
       includes/bootstrap/css/bootstrap-theme.css: {}
       includes/fonts/oswald_regular/stylesheet.css: {}
@@ -10,10 +10,8 @@ global-styling:
       css/html.css: {}
       css/page.css: {}
       css/block.css: {}
-      css/view.css: {}
       css/responsive.css: {}
       css/translation.css: {}
-      css/print.css: { media: print }
   js:
     includes/respond/respond.min.js: {}
     includes/respond/html5shiv.min.js: {}

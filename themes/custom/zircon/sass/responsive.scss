@@ -1,3 +1,5 @@
+@import "includes/_include";
+
 //tablet
 @media (max-width: 1199px) {
     #slideshow_container {
@@ -168,20 +170,20 @@
                             padding: 10px 0;
                         }
                         .is-active {
-                            color: $red;
+                            color: $orange;
                             background: none;
                         }
                         &.menu-item--active-trail {
                             > a {
                                 background: none;
-                                color: $red;
+                                color: $orange;
                             }
                         }
                         &:hover,
                         &:focus {
                             a {
                                 background: none;
-                                color: $red;
+                                color: $orange;
                                 text-decoration: none;
                             }
                         }
@@ -205,15 +207,15 @@
                                     padding: 10px 0;
                                     &:hover,
                                     &:focus {
-                                        color: $red;
+                                        color: $orange;
                                     }
                                 }
                                 .is-active {
-                                    color: $red;
+                                    color: $orange;
                                 }
                                 .menu-item--active-trail {
                                     > a {
-                                        color: $red;
+                                        color: $orange;
                                     }
                                 }
                             }
@@ -253,7 +255,7 @@
                         color: $dark_grey;
                         &:hover,
                         &:focus {
-                            color: $red;
+                            color: $orange;
                         }
                     }
                 }
@@ -261,7 +263,7 @@
                 &:focus {
                     .views-field-title {
                         a {
-                            color: $red;
+                            color: $orange;
                         }
                     }
                 }
@@ -284,7 +286,6 @@
 
 //mobile
 @media (max-width: 767px) {
-    @import "includes/_include";
     h2,
     h1,
     .h1 {
@@ -592,7 +593,7 @@
                         padding-top: 0;
                         &:hover,
                         &:focus {
-                            color: $red;
+                            color: $orange;
                         }
                     }
                 }
@@ -620,3 +621,4 @@
         }
     }
 }
+

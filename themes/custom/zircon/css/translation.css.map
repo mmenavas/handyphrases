@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAa;EACX,aAAa,EAAC,IAAI;;AAEpB,mBAAoB;EAClB,OAAO,EAAE,MAAM;;AAEjB;KACM;EACJ,OAAO,EAAE,YAAY;;AAEvB,KAAM;EACJ,UAAU,EAAE,OAAO;EACnB,OAAO,EAAE,OAAO;EAChB,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,cAAc;;AAGxB,mBAAoB;EAClB,KAAK,EAAC,OAAO",
+"sources": ["../sass/translation.scss"],
+"names": [],
+"file": "translation.css"
+}

@@ -55,7 +55,7 @@ ul.links.inline {
             -webkit-border-radius: 3px;
             &:hover,
             &:focus {
-                background: $red;
+                background: $orange;
                 color: $white;
             }
         }
@@ -75,7 +75,7 @@ ul.links.inline {
             }
             &:hover,
             &:focus {
-                color: $red;
+                color: $orange;
                 background: none;
             }
         }
@@ -98,7 +98,7 @@ ul.links.inline {
         }
         &:hover,
         &:focus {
-            color: $red;
+            color: $orange;
         }
     }
 }
@@ -223,11 +223,11 @@ ul.links.inline {
         .is-active {
             a {
                 background: none;
-                color: $red;
+                color: $orange;
                 padding: 0;
                 &:hover,
                 &:focus {
-                    color: $red;
+                    color: $orange;
                     background: none;
                 }
             }
@@ -416,7 +416,7 @@ ul.links.inline {
         border: none;
         padding: 7px 20px;
         color: #fff;
-        background: $red;
+        background: $orange;
         border-radius: 3px;
         -webkit-border-radius: 3px;
         cursor: pointer;
@@ -448,7 +448,7 @@ ul.links.inline {
             border-bottom: 1px dotted #999;
             &:hover,
             &:focus {
-                border-bottom-color: $red;
+                border-bottom-color: $orange;
             }
         }
     }
@@ -497,3 +497,5 @@ ul.links.inline {
         }
     }
 }
+
+
