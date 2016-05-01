@@ -1,0 +1,5 @@
+font-awesome:
+  version: VERSION
+  css:
+    theme:
+      lib/fontawesome/font-awesome.css : {}
