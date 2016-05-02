@@ -37,9 +37,20 @@ class CreateTranslationBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+    $build = [];
 
-    $form = \Drupal::formBuilder()->getForm('Drupal\handyphrases\Form\CreateTranslationForm');
+    // Keep anonymous users from voting
+    $user = \Drupal::currentUser();
+    if ($user->isAnonymous()) {
+      $build = [
+        '#markup' => '<p>You must log in to provide and rate translations.</p>',
+      ];
+    }
+    else {
 
-    return $form;
+      $build = \Drupal::formBuilder()->getForm('Drupal\handyphrases\Form\CreateTranslationForm');
+    }
+
+    return $build;
   }
 }

@@ -58,6 +58,12 @@ class CreateTranslationForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
+    // Keep anonymous users from voting
+    $user = \Drupal::currentUser();
+    if ($user->isAnonymous()) {
+      return;
+    }
+
     $node = \Drupal::routeMatch()->getParameter('node');
     $node_type = $node->getType();
     $nid = $node->id();

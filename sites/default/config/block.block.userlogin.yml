@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - system
     - user
   theme:
     - zircon
@@ -17,4 +18,9 @@ settings:
   label: 'Log in to create and translate phrases'
   provider: user
   label_display: visible
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*"
+    negate: true
+    context_mapping: {  }
