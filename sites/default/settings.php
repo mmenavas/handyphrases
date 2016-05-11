@@ -42,20 +42,12 @@ if (defined('PANTHEON_ENVIRONMENT')) {
  * Custom settings for Pantheon environments
  */
 if (defined('PANTHEON_ENVIRONMENT') && PANTHEON_ENVIRONMENT == 'live') {
-  // Anonymous caching - enabled.
-  $conf['cache'] = 1;
-  // Block caching - enabled.
-  $conf['block_cache'] = 1;
   // Expiration of cached pages - 15 minutes.
-  $conf['page_cache_maximum_age'] = 900;
+  $config['system.performance']['cache']['page']['max_age'] = 900;
   // Aggregate and compress CSS files in Drupal - on.
-  $conf['preprocess_css'] = 1;
+  $config['system.performance']['css']['preprocess'] = true;
   // Aggregate JavaScript files in Drupal - on.
-  $conf['preprocess_js'] = 1;
-  // Minimum cache lifetime - always none.
-  $conf['cache_lifetime'] = 0;
-  // Cached page compression - always off.
-  $conf['page_compression'] = 0;
+  $config['system.performance']['js']['preprocess'] = true;
   // Google Analytics.
-  $conf['googleanalytics_account'] = 'UA-77566945-1';
+  $config['google_analytics.settings']['account'] = 'UA-77566945-1';
 }
