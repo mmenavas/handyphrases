@@ -5,5 +5,3 @@ If you're learning Spanish, you can search for English phrases to find their Spa
 If you can't find a phrase, add the phrase you're looking for.
 If you are a Spanish speaker, you may rate the quality of the translations or contribute with new translations.
 Translations are 100% powered by the community.
-
-To view a live demo of this site, go to  https://live-handyphrases.pantheonsite.io/ 
